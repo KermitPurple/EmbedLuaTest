@@ -7,7 +7,7 @@ else#if compiler is not gcc, so probably g++ because those are the only ones I u
 endif
 CFLAGS = -c -Wall# -c compile and assemble do not link, -Wall turns warnings on
 INCLUDE = -Iinclude# folders to be included, anything following -I is the directory the compiler can now see
-LIBS = -llua54 -llua# libs to be included, anything following -l is a library that is included
+LIBS = -llua# libs to be included, anything following -l is a library that is included
 OBJECTS = $(patsubst src/%$(EXTENSION),bin/%.o,$(wildcard src/*$(EXTENSION)))# in bin/%.o format, all of the objects to be compiled
 # previous line explained:
 # patsubst replaces the first arg template with the second arg template on the variable in the third arg
